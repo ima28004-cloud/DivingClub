@@ -1,5 +1,5 @@
 import { CatalogSection, Kicker } from './Catalog.jsx';
-import { centerName, contacts } from './site-data.js';
+import { clubName, contacts } from './site-data.js';
 import poolLesson from './assets/pool-lesson.webp';
 import openWaterLesson from './assets/open-water-lesson.webp';
 import underwaterLesson from './assets/underwater-lesson.webp';
@@ -13,7 +13,7 @@ const photos = [
   [poolLesson, 1000, 666, 'Занятие по дайвингу в бассейне', 'Занятия в бассейне'],
   [openWaterLesson, 1280, 853, 'Занятие дайверов в открытой воде', 'Открытая вода'],
   [underwaterLesson, 526, 370, 'Дайверы на подводном занятии', 'Подводные занятия'],
-  [clubTrip, 1000, 563, 'Участники дайвинг-центра на выезде', 'Выезд клуба'],
+  [clubTrip, 1000, 563, 'Участники клуба на выезде', 'Выезд клуба'],
   [poolArchive, 1000, 563, 'Кадр из архива занятий в бассейне'],
   [openWaterArchive, 1000, 656, 'Кадр из архива занятий на открытой воде'],
   [poolTraining, 800, 533, 'Кадр тренировки в бассейне'],
@@ -26,7 +26,7 @@ export function About({ section }) {
       {...section}
       category="Команда"
       title="О клубе"
-      description="Дайвинг-центр объединяет тех, кто хочет освоить подводное плавание. Участники отрабатывают навыки в бассейне, тренируются на открытой воде и выезжают в экспедиции в различные регионы России."
+      description="Клуб объединяет тех, кто хочет освоить подводное плавание. Участники отрабатывают навыки в бассейне, тренируются на открытой воде и выезжают в экспедиции в различные регионы России."
     >
       <div className="club-collage" role="group" aria-labelledby="collage-title">
         <h3 id="collage-title">Занятия и выезды клуба</h3>
@@ -48,7 +48,7 @@ export function Location({ section }) {
     <CatalogSection {...section} category="Адрес клуба" title="Маршрут до клуба">
       <div className="location-grid">
         <div className="location-info">
-          <h3>{centerName}</h3>
+          <h3>{clubName}</h3>
           <address>Москва, проспект Вернадского, 78, стр. 5</address>
           <p>Ближайшее метро — «Юго-Западная». Перед первым занятием уточните у инструктора, где вас встретят на территории кампуса.</p>
           <div className="location-actions">
@@ -58,7 +58,7 @@ export function Location({ section }) {
         </div>
         <figure className="location-map">
           <iframe
-            title={`${centerName} на Яндекс Картах`}
+            title={`${clubName} на Яндекс Картах`}
             src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=178744849408"
             width="760"
             height="420"
@@ -82,7 +82,7 @@ export function Join({ section }) {
         <h2 id="join-title">Записаться на курс</h2>
         <p>Специалисты помогут Вам выбрать подходящую программу и подскажут всё необходимое для интересных и эффективных тренировок</p>
         <p className="join-address"><a href="#location">Проспект Вернадского, 78, стр. 5</a></p>
-        <a className="button" href={contacts.office.href} aria-label={`Позвонить в дайвинг-центр, ${contacts.office.label}`}>
+        <a className="button" href={contacts.office.href} aria-label={`Позвонить в клуб, ${contacts.office.label}`}>
           {contacts.office.label}
         </a>
         <div className="contact-links">

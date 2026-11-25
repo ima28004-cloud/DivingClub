@@ -13,6 +13,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--water); }
 body::before {
   position: fixed;
@@ -160,13 +161,6 @@ h1 {
 }
 @media (max-width: 740px) {
   :root { --shell: calc(100% - 2.5rem); }
-  .hero { min-height: max(38rem, 100svh); align-items: end; padding-block: 7rem 6.6rem; }
-  .hero-content { padding-right: 0; }
-  .hero-media { --focus-x: 80%; }
-  .hero-shade {
-    background: linear-gradient(0deg, var(--water), rgb(3 23 34 / .94) 15%, rgb(3 23 34 / .7) 34%, rgb(3 23 34 / .64) 72%, rgb(3 23 34 / .22) 88%, rgb(3 23 34 / .55));
-  }
-  h1 { font-size: clamp(3.3rem, 15vw, 6.7rem); }
   .scroll-cue { bottom: 1.35rem; font-size: .73rem; }
   .depth { top: 5.1rem; right: 1.25rem; width: auto; padding: .5rem .66rem; border: 1px solid rgb(209 235 238 / .35); border-radius: 4px; transform: none; background: #071c29; }
   .depth-heading { display: inline; }
@@ -203,7 +197,6 @@ h1 {
   letter-spacing: -.045em;
   line-height: 1.06;
 }
-h1 span { display: inline-block; }
 .hero-summary { max-width: 66ch; }
 .hero-summary p + p { margin-top: .38rem; }
 .hero-actions {
@@ -379,15 +372,30 @@ h1 span { display: inline-block; }
 @media (max-width: 1050px) and (max-height: 680px) {
   .depth { display: none; }
 }
+@media (max-width: 820px), (max-width: 950px) and (orientation: landscape) and (pointer: coarse) {
+  .hero {
+    --photo-height: clamp(17rem, 45svh, 27rem);
+    min-height: 100svh;
+    align-items: center;
+    padding-block: calc(var(--photo-height) * .76) 5.6rem;
+    background: linear-gradient(0deg, var(--water), #032d39 46%);
+  }
+  .hero-media, .hero-shade { inset: 0 0 auto; height: var(--photo-height); }
+  .hero-media { --focus-x: 100%; --focus-y: 54%; transform: none; }
+  .hero-shade {
+    background: linear-gradient(180deg, rgb(3 19 32 / .55), transparent 35% 62%, #032d39 94%);
+  }
+  .water-title { margin-block: .65rem 1rem; }
+  h1 { font-size: clamp(2.5rem, 10.6vw, 5.6rem); }
+}
 @media (max-width: 740px) {
   .collage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 630px) {
   :root { --shell: calc(100% - 2.2rem); }
-  .hero { min-height: max(42rem, 100svh); padding-block: 7rem 5.6rem; }
-  h1 { font-size: clamp(1.85rem, 9.2vw, 3.7rem); }
   .catalog-heading h2, .join h2 { font-size: clamp(1.95rem, 7.8vw, 3.2rem); }
-  .hero-actions { gap: .6rem 1.15rem; }
+  .hero-summary { line-height: 1.43; }
+  .hero-actions { gap: .6rem 1.15rem; margin-top: 1.25rem; }
   .rental-grid { grid-template-columns: minmax(0, 1fr); }
 
   .catalog-heading:has(.catalog-cta) { display: block; }

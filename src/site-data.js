@@ -1,4 +1,5 @@
-export const centerName = 'Дайвинг-центр ВУЦ РТУ МИРЭА';
+export const clubName = 'Клуб дайвинга';
+export const affiliation = 'ВУЦ РТУ МИРЭА';
 
 export const sections = [
   { id: 'surface', depth: 0, label: 'Главная' },

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import logo from './assets/logo.svg';
-import { centerName, contacts, sections } from './site-data.js';
+import { affiliation, clubName, contacts, sections } from './site-data.js';
 
 const phoneIcon = <path d="M22 16.92v3a2 2 0 0 1-2.18 2A18 18 0 0 1 4.1 12.2 18 18 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72l.7 3a2 2 0 0 1-.45 2.11L8.1 10.1a14 14 0 0 0 5.8 5.8l1.27-1.27a2 2 0 0 1 2.1-.45l3 .7A2 2 0 0 1 22 16.92z" />;
 const contactIcons = {
@@ -73,9 +73,9 @@ export default function SiteHeader({ activeSection }) {
   return (
     <>
       <header className="site-header menu-ready" ref={headerRef} onBlur={closeOnBlur} onClick={closeOnNavigate}>
-        <a href="#surface" className="brand" aria-label={centerName}>
+        <a href="#surface" className="brand" aria-label={`${clubName} · ${affiliation}`}>
           <img src={logo} width="42" height="42" alt="" />
-          <span>Дайвинг-центр<small>ВУЦ РТУ МИРЭА</small></span>
+          <span>{clubName}<small>{affiliation}</small></span>
         </a>
         <JoinLink mobile />
         <button

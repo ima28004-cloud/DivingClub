@@ -3,7 +3,7 @@ import SiteHeader from './SiteHeader.jsx';
 import { About, Join, Location } from './Club.jsx';
 import { Equipment, Specialties, Training } from './Catalog.jsx';
 import { OceanBubbles, useDiveMotion, useWaterRefraction } from './motion.jsx';
-import { centerName, sections } from './site-data.js';
+import { clubName, sections } from './site-data.js';
 import heroImage from './assets/hero.webp';
 
 function Hero({ section }) {
@@ -18,7 +18,7 @@ function Hero({ section }) {
       <div className="hero-shade" aria-hidden="true" />
       <div className="hero-content content">
         <div className="water-title refract" data-water-text>
-          <h1 id="title"><span>Дайвинг-центр</span><br />{' '}<span>ВУЦ РТУ МИРЭА</span></h1>
+          <h1 id="title">{clubName}</h1>
         </div>
         <div className="hero-summary">
           <p>Обучение дайвингу в Москве: полный путь от новичка до профессионала.</p>
@@ -68,7 +68,7 @@ function navigateToSection(event) {
   event.preventDefault();
   if (anchor.hash !== window.location.hash) window.history.pushState(null, '', anchor.hash);
   target.focus({ preventScroll: true });
-  target.scrollIntoView({ behavior: 'instant' });
+  target.scrollIntoView({ behavior: anchor.classList.contains('skip') ? 'instant' : 'auto' });
 }
 
 export default function App() {
@@ -76,7 +76,7 @@ export default function App() {
   const { depth, activeSection } = useDiveMotion(sections, mainRef);
 
   useLayoutEffect(() => {
-    document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ behavior: 'instant' });
   }, []);
 
   return (
@@ -93,7 +93,7 @@ export default function App() {
       <DepthGauge depth={depth} activeSection={activeSection} />
       <footer className="footer">
         <div className="content footer-inner">
-          <span>{centerName}</span>
+          <span>{clubName}</span>
           <span className="footer-note">Шкала показывает виртуальную глубину</span>
           <a href="#surface">На поверхность</a>
           <p className="footer-note footer-disclaimer">Информация на сайте носит ознакомительный характер и не является публичной офертой.</p>
