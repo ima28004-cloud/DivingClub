@@ -82,8 +82,8 @@ export function Join({ section }) {
         <h2 id="join-title">Записаться на курс</h2>
         <p>Специалисты помогут Вам выбрать подходящую программу и подскажут всё необходимое для интересных и эффективных тренировок</p>
         <p className="join-address"><a href="#location">Проспект Вернадского, 78, стр. 5</a></p>
-        <a className="button" href={contacts.office.href} aria-label={`Позвонить в клуб, ${contacts.office.label}`}>
-          {contacts.office.label}
+        <a className="button" href={contacts.phone.href} aria-label={`Позвонить в клуб, ${contacts.phone.label}`}>
+          {contacts.phone.label}
         </a>
         <div className="contact-links">
           <a href={contacts.email.href}>Написать инструктору</a>

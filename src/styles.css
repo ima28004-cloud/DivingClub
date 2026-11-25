@@ -386,7 +386,7 @@ h1 {
     background: linear-gradient(180deg, rgb(3 19 32 / .55), transparent 35% 62%, #032d39 94%);
   }
   .water-title { margin-block: .65rem 1rem; }
-  h1 { font-size: clamp(2.5rem, 10.6vw, 5.6rem); }
+  h1 { font-size: clamp(2rem, 8.1vw, 5.6rem); }
 }
 @media (max-width: 740px) {
   .collage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -408,6 +408,9 @@ h1 {
   .price-grid { grid-template-columns: minmax(0, 1fr); }
   .price-card strong { padding-top: .15rem; }
   .scroll-cue { bottom: 4rem; }
+}
+@media (max-width: 435px) and (max-height: 680px) {
+  .hero { --photo-height: 15rem; }
 }
 
 .site-header {

@@ -3,7 +3,7 @@ import SiteHeader from './SiteHeader.jsx';
 import { About, Join, Location } from './Club.jsx';
 import { Equipment, Specialties, Training } from './Catalog.jsx';
 import { OceanBubbles, useDiveMotion, useWaterRefraction } from './motion.jsx';
-import { clubName, sections } from './site-data.js';
+import { clubName, clubTitle, sections, university } from './site-data.js';
 import heroImage from './assets/hero.webp';
 
 function Hero({ section }) {
@@ -18,7 +18,7 @@ function Hero({ section }) {
       <div className="hero-shade" aria-hidden="true" />
       <div className="hero-content content">
         <div className="water-title refract" data-water-text>
-          <h1 id="title">{clubName}</h1>
+          <h1 id="title">{clubTitle}<br />{' '}{university}</h1>
         </div>
         <div className="hero-summary">
           <p>Обучение дайвингу в Москве: полный путь от новичка до профессионала.</p>
