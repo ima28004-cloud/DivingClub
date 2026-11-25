@@ -1,7 +1,6 @@
 export const clubTitle = 'Дайвинг-клуб';
 export const university = 'РТУ МИРЭА';
 export const clubName = `${clubTitle} ${university}`;
-export const affiliation = `ВУЦ ${university}`;
 
 export const sections = [
   { id: 'surface', depth: 0, label: 'Главная' },
