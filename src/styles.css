@@ -147,8 +147,15 @@ h1 {
 }
 .join-content > p, .join .kicker { justify-content: center; margin-inline: auto; }
 .join-content > p.join-address { margin-top: .8rem; font-size: .95rem; }
-.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem 1.5rem; margin-top: 1.2rem; color: var(--muted); }
-.contact-links a:hover { color: var(--lime); }
+.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: .85rem; }
+.contact-button {
+  min-width: 12rem;
+  margin-top: 0;
+  border: 1px solid rgb(217 250 117 / .65);
+  background: rgb(217 250 117 / .07);
+  color: var(--lime);
+}
+.contact-button:hover { background: rgb(217 250 117 / .17); box-shadow: none; }
 .footer { position: relative; border-top: 1px solid rgb(198 226 233 / .2); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 5rem; padding-block: 1rem; font-size: .92rem; }
 .footer b, .footer a { color: var(--lime); }
@@ -406,6 +413,8 @@ h1 {
 }
 @media (max-width: 435px) {
   .price-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-links { flex-direction: column; align-items: center; }
+  .join-content > .button, .contact-button { width: min(100%, 19rem); }
   .price-card strong { padding-top: .15rem; }
   .scroll-cue { bottom: 4rem; }
 }
@@ -496,7 +505,7 @@ h1 {
   border-left: 1px solid #4a6b76;
   padding-left: clamp(.28rem, .57vw, .66rem);
 }
-.header-icon {
+.header-icon, .contact-icon {
   width: 1rem;
   height: 1rem;
   flex: none;
@@ -506,6 +515,7 @@ h1 {
   stroke-linejoin: round;
   fill: none;
 }
+.contact-icon { width: 1.15rem; height: 1.15rem; }
 .header-nav a:hover, .header-contacts a:hover { color: var(--lime); }
 .header-join {
   display: inline-flex;

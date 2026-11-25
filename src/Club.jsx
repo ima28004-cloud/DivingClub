@@ -1,4 +1,5 @@
 import { CatalogSection, Kicker } from './Catalog.jsx';
+import ContactIcon from './ContactIcon.jsx';
 import { clubName, contacts } from './site-data.js';
 import poolLesson from './assets/pool-lesson.webp';
 import openWaterLesson from './assets/open-water-lesson.webp';
@@ -83,11 +84,12 @@ export function Join({ section }) {
         <p>Специалисты помогут Вам выбрать подходящую программу и подскажут всё необходимое для интересных и эффективных тренировок</p>
         <p className="join-address"><a href="#location">Проспект Вернадского, 78, стр. 5</a></p>
         <a className="button" href={contacts.phone.href} aria-label={`Позвонить в клуб, ${contacts.phone.label}`}>
+          <ContactIcon type="phone" />
           {contacts.phone.label}
         </a>
         <div className="contact-links">
-          <a href={contacts.email.href}>Написать инструктору</a>
-          <a href={contacts.telegram.href}>Клуб в Telegram</a>
+          <a className="button contact-button" href={contacts.email.href}><ContactIcon type="email" />Написать инструктору</a>
+          <a className="button contact-button" href={contacts.telegram.href}><ContactIcon type="telegram" />Клуб в Telegram</a>
         </div>
       </div>
     </section>
