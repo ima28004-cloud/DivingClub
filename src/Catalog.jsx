@@ -98,11 +98,11 @@ export function Training({ section }) {
         ))}
       </div>
       <div className="course-note">
-        <p>Базовый курс включает пять теоретических занятий и пять занятий в бассейне. Возможность получить Referral Diver SSI после бассейна и условия оформления Open Water Diver SSI уточняйте у инструктора.</p>
+        <p>Базовый курс в закрытой воде включает теорию и занятия в бассейне. Возможность получить Referral Diver SSI после бассейна и условия оформления Open Water Diver SSI уточняйте у инструктора.</p>
       </div>
       <div className="course-note">
         <p>Цены по прайсу РТУ МИРЭА за одного человека. Для обучающихся в ВУЦ, студентов второго курса, планирующих поступление в ВУЦ, и других категорий, указанных в прайсе, обучение проводится безвозмездно. Для остальных студентов РТУ МИРЭА действует скидка 20%.</p>
-        <a className="text-link" href="https://www.mirea.ru/education/voennyy-uchebnyy-tsentr/kluby/klub-dayvinga/">Прайс и условия скидок на mirea.ru</a>
+        <a className="text-link" href="https://www.mirea.ru/education/voennyy-uchebnyy-tsentr/kluby/klub-dayvinga/">Таблица цен и условия скидок на mirea.ru</a>
       </div>
     </CatalogSection>
   );

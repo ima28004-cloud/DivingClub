@@ -11,7 +11,6 @@ export const sections = [
 ];
 
 export const contacts = {
-  mobile: { href: 'tel:+79161749591', label: '+7 916 174 95 91' },
   office: { href: 'tel:+74996008080;ext=26202', label: '+7 (499) 600-80-80, доб. 26202' },
   email: { href: 'mailto:polyakov_ag@mirea.ru', label: 'polyakov_ag@mirea.ru' },
   telegram: { href: 'https://t.me/Diving_club_RTU_MIREA', label: 'Telegram' },

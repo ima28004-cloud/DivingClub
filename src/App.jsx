@@ -26,8 +26,8 @@ function Hero({ section }) {
           <p>Международная сертификация — Scuba Schools International (SSI)</p>
         </div>
         <div className="hero-actions">
-          <a className="button" href="#practice"><i className="dive-icon" aria-hidden="true" />Начать погружение</a>
-          <a className="text-link" href="#join">Записаться на курс</a>
+          <a className="button" href="#join"><i className="dive-icon" aria-hidden="true" />Записаться на курс</a>
+          <a className="text-link" href="#practice">Посмотреть курсы</a>
         </div>
       </div>
       <a className="scroll-cue" href="#practice"><i aria-hidden="true" />Листайте, чтобы погрузиться</a>
