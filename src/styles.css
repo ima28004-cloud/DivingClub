@@ -163,7 +163,9 @@ h1 {
   .hero { min-height: max(38rem, 100svh); align-items: end; padding-block: 7rem 6.6rem; }
   .hero-content { padding-right: 0; }
   .hero-media { --focus-x: 80%; }
-  .hero-shade { background: linear-gradient(0deg, var(--water), rgb(3 23 34 / .9) 17%, rgb(3 23 34 / .18) 66%, rgb(3 23 34 / .08) 81%, rgb(3 23 34 / .55)); }
+  .hero-shade {
+    background: linear-gradient(0deg, var(--water), rgb(3 23 34 / .94) 15%, rgb(3 23 34 / .7) 34%, rgb(3 23 34 / .64) 72%, rgb(3 23 34 / .22) 88%, rgb(3 23 34 / .55));
+  }
   h1 { font-size: clamp(3.3rem, 15vw, 6.7rem); }
   .scroll-cue { bottom: 1.35rem; font-size: .73rem; }
   .depth { top: 5.1rem; right: 1.25rem; width: auto; padding: .5rem .66rem; border: 1px solid rgb(209 235 238 / .35); border-radius: 4px; transform: none; background: #071c29; }
@@ -515,10 +517,11 @@ h1 span { display: inline-block; }
 .header-menu-toggle { display: none; }
 .header-scrim { display: none; }
 @media (min-width: 1240px) {
-  .header-nav { font-size: clamp(.625rem, .68vw, .74rem); }
+  .header-nav { font-size: clamp(.75rem, .86vw, .875rem); }
   .header-contacts .header-icon { width: .86rem; height: .86rem; }
 }
 @media (max-width: 1239px) {
+  html:has(.header-menu-toggle[aria-expanded="true"]) { overflow: hidden; overscroll-behavior: none; }
   .site-header {
     --header-top: max(1rem, env(safe-area-inset-top, 0px));
     z-index: 6;
@@ -536,6 +539,7 @@ h1 span { display: inline-block; }
     inset: 0;
     z-index: 5;
     background: rgb(3 20 30 / .88);
+    touch-action: none;
   }
   .site-header:not(.menu-ready) {
     position: relative;
